@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 using System.Data.Entity;
-using NotificationDashboardPrototype.Data;
 
-namespace NotificationDashboardPrototype.DataLayer
+namespace NotificationDashboardPrototype.Data
 {
     public class NotificationModelContext : DbContext
     {
@@ -16,7 +14,7 @@ namespace NotificationDashboardPrototype.DataLayer
 
         public DbSet<ITCompany> ITCompanies { get; set; }
         public DbSet<ITManager> ITManagers { get; set; }
-        
-        
+
+
     }
 }

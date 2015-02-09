@@ -11,7 +11,10 @@ namespace NotificationDashboardPrototype.Data
         public int ITManagerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string ITCompanyId { get; set; }
+        
+        public int ITCompanyId { get; set; }
+        public virtual ITCompany Server { get; set; }
+  
 
     }
 }

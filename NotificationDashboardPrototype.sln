@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationDashboardProtot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationDashboardPrototype.Tests", "NotificationDashboardPrototype.Tests\NotificationDashboardPrototype.Tests.csproj", "{572BECC4-7F60-4ED6-A7BD-043CC48460C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationDashboardPrototype.DataLayer", "NotificationDashboardPrototype.DataLayer\NotificationDashboardPrototype.DataLayer.csproj", "{BEC6019B-5B79-4B30-82A6-980FD40B84C7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{572BECC4-7F60-4ED6-A7BD-043CC48460C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{572BECC4-7F60-4ED6-A7BD-043CC48460C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{572BECC4-7F60-4ED6-A7BD-043CC48460C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BEC6019B-5B79-4B30-82A6-980FD40B84C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEC6019B-5B79-4B30-82A6-980FD40B84C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEC6019B-5B79-4B30-82A6-980FD40B84C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEC6019B-5B79-4B30-82A6-980FD40B84C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
