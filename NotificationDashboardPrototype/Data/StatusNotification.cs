@@ -15,13 +15,13 @@ namespace NotificationDashboardPrototype.Data
         public StatusResult Status { get; set; }
         public string Message { get; set; }
         public DateTime DateCreated { get; set; }
-        public int ITManagerId { get; set; }
+        //public int ITManagerId { get; set; }
         
         // Julie Lerman recommends foreign key and nav property for EF
         public int ServerId { get; set; }
         public virtual Server Server { get; set; }
         
-        public virtual ITManager ITManager { get; set; }
+        //public virtual ITManager ITManager { get; set; }
 
     }
 

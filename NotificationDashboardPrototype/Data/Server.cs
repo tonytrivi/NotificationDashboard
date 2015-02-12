@@ -18,7 +18,9 @@ namespace NotificationDashboardPrototype.Data
 
         public int ServerId { get; set; }
         public string Name { get; set; }
-        public DbGeography LocationLatLong { get; set; }
+        //public DbGeography LocationLatLong { get; set; }
+        public ServerVersion ServerVersion { get; set; }
+        public int CustomerId { get; set; }
        
 
         public virtual ICollection<StatusNotification> Notifications 
@@ -26,5 +28,13 @@ namespace NotificationDashboardPrototype.Data
             get { return _notifications; }
             set { _notifications = value; }
         }
+    }
+
+    public enum ServerVersion
+    {
+        WindowsServer2003 = 1,
+        WindowsServer2008 = 2,
+        WindowsServer2012 = 3
+
     }
 }
