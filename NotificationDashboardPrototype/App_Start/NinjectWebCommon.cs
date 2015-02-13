@@ -12,6 +12,7 @@ namespace NotificationDashboardPrototype.App_Start
     using Ninject.Web.Common;
 
     using NotificationDashboardPrototype.Data;
+    using WebApiContrib.IoC.Ninject;
 
     public static class NinjectWebCommon 
     {
@@ -48,6 +49,9 @@ namespace NotificationDashboardPrototype.App_Start
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
+
+                System.Web.Http.GlobalConfiguration.Configuration.DependencyResolver = new NinjectResolver(kernel);
+
                 return kernel;
             }
             catch

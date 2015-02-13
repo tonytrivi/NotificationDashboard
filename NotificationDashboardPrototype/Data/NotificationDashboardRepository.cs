@@ -22,6 +22,16 @@ namespace NotificationDashboardPrototype.Data
             return servers;
         }
 
+        public StatusNotification GetStatusNotification(int notificationId)
+        {
+            return _dbContext.StatusNotifications.FirstOrDefault(r => r.StatusNotificationId == notificationId);
+        }
+
+        public IQueryable<StatusNotification> GetStatusNotifications()
+        {
+            return _dbContext.StatusNotifications;
+        }
+
         public IQueryable<StatusNotification> GetStatusNotificationsByServer(int serverId)
         {
             return _dbContext.StatusNotifications.Where(r => r.ServerId == serverId);
