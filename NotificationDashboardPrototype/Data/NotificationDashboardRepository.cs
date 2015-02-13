@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace NotificationDashboardPrototype.Data
 {
@@ -15,7 +16,10 @@ namespace NotificationDashboardPrototype.Data
         }
         public IQueryable<Server> GetServers()
         {
-            return _dbContext.Servers;
+            var servers = _dbContext.Servers
+                .Include(s => s.Notifications);
+
+            return servers;
         }
 
         public IQueryable<StatusNotification> GetStatusNotificationsByServer(int serverId)

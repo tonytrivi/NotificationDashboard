@@ -63,6 +63,7 @@ namespace NotificationDashboardPrototype.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            // adding InRequestScope saves time when a request is made for these objects
             kernel.Bind<NotificationModelContext>().To<NotificationModelContext>().InRequestScope();
             kernel.Bind<INotificationDashboardRepository>().To<NotificationDashboardRepository>().InRequestScope();
         }        

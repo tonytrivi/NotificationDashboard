@@ -8,6 +8,11 @@ namespace NotificationDashboardPrototype.Data
 {
     public class NotificationModelContext : DbContext
     {
+        public NotificationModelContext() {
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
+        }
+        
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Server> Servers { get; set; }
         public DbSet<StatusNotification> StatusNotifications { get; set; }
