@@ -4,9 +4,12 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.Spatial;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace NotificationDashboardPrototype.Data
 {
+    [JsonObject(IsReference = true)]
     public class Server
     {
         private ICollection<StatusNotification> _notifications;
@@ -16,13 +19,17 @@ namespace NotificationDashboardPrototype.Data
             _notifications = new List<StatusNotification>();
         }
 
+
         public int ServerId { get; set; }
+
         public string Name { get; set; }
         //public DbGeography LocationLatLong { get; set; }
-        public ServerVersion ServerVersion { get; set; }
-        public int CustomerId { get; set; }
-       
 
+        public ServerVersion ServerVersion { get; set; }
+
+        public int CustomerId { get; set; }
+
+  
         public virtual ICollection<StatusNotification> Notifications 
         {
             get { return _notifications; }

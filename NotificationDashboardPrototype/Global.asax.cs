@@ -33,7 +33,7 @@ namespace NotificationDashboardPrototype
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             //commented out because I don't want to seed the database all the time
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<NotificationModelContext, Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<NotificationModelContext, Configuration>());
         }
     }
 }

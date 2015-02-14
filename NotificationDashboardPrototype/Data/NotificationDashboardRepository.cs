@@ -22,6 +22,13 @@ namespace NotificationDashboardPrototype.Data
             return servers;
         }
 
+        public Server GetServer(string serverName)
+        {
+            var server = _dbContext.Servers.FirstOrDefault(r => r.Name == serverName);
+
+            return server;
+        }
+
         public StatusNotification GetStatusNotification(int notificationId)
         {
             return _dbContext.StatusNotifications.FirstOrDefault(r => r.StatusNotificationId == notificationId);
@@ -35,6 +42,34 @@ namespace NotificationDashboardPrototype.Data
         public IQueryable<StatusNotification> GetStatusNotificationsByServer(int serverId)
         {
             return _dbContext.StatusNotifications.Where(r => r.ServerId == serverId);
+        }
+
+
+        public bool Save()
+        {
+            try 
+            {
+               return  _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception ex) 
+            {
+                //TODO: log this error
+                return false;
+            }
+        }
+
+        public bool AddStatusNotification(StatusNotification newStatusNotification)
+        {
+            try
+            {
+                _dbContext.StatusNotifications.Add(newStatusNotification);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                //TODO: log this error
+                return false;
+            }
         }
     }
 }

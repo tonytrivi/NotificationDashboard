@@ -27,6 +27,7 @@ namespace NotificationDashboardPrototype.Controllers
         // GET: api/StatusNotifications
         public IQueryable<StatusNotification> GetStatusNotifications()
         {
+            //return _repo.GetStatusNotifications().Include("Server").AsQueryable();
             return _repo.GetStatusNotifications();
         }
 
@@ -80,17 +81,23 @@ namespace NotificationDashboardPrototype.Controllers
 
         // POST: api/StatusNotifications
         [ResponseType(typeof(StatusNotification))]
-        public IHttpActionResult PostStatusNotification(StatusNotification statusNotification)
+        public IHttpActionResult PostStatusNotification([FromBody]StatusNotification statusNotification)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
+
+            // we want to associate this notification with a server
+            var server = _repo.GetServer(statusNotification.Server.Name);
+            statusNotification.ServerId = server.ServerId;
+            statusNotification.Server = null;
+
+            if (_repo.AddStatusNotification(statusNotification) && _repo.Save()) {
+                return CreatedAtRoute("DefaultApi", new { id = statusNotification.StatusNotificationId }, statusNotification);
+
             }
 
-            db.StatusNotifications.Add(statusNotification);
-            db.SaveChanges();
+            // we are going to let them know that the Add didn't work
+            return BadRequest(ModelState);
+          
 
-            return CreatedAtRoute("DefaultApi", new { id = statusNotification.StatusNotificationId }, statusNotification);
         }
 
         // DELETE: api/StatusNotifications/5
