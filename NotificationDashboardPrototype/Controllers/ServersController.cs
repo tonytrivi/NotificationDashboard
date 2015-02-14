@@ -23,7 +23,7 @@ namespace NotificationDashboardPrototype.Controllers
         // GET: Servers
         public ActionResult Index()
         {
-            var servers = _repo.GetServers().ToList();
+            var servers = _repo.GetServers().Include("Notifications").ToList();
 
             return View(servers);
             
