@@ -7,17 +7,14 @@
 }
 
 <div>
-    <h2>Index</h2>
 
-
-
-    <p>
+    @*<p>
         @Html.ActionLink("Create New", "Create")
-    </p>
+    </p>*@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @*@Html.DisplayNameFor(model => model.Name)*@
             </th>
 
 
@@ -34,9 +31,9 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
+                <th>
                     @Html.DisplayFor(modelItem => item.Name)
-                </td>
+                </th>
                 <td>
                     
                 </td>
@@ -57,7 +54,9 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => notification.Status)
+                        <div class="@notification.Status">
+                            @Html.DisplayFor(modelItem => notification.Status)
+                        </div>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => notification.Message)
@@ -65,7 +64,9 @@
                     <td>
                         @Html.DisplayFor(modelItem => notification.StatusType)
                     </td>
-                    <td></td>
+                    <td>
+                        
+                    </td>
                 </tr>
             }
 
