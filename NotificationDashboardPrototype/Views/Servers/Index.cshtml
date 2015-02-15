@@ -6,6 +6,8 @@
     @*<script src="~/js/servers-index.js"></script>*@
 }
 
+
+
 <div>
 
     @*<p>
@@ -35,7 +37,7 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </th>
                 <td>
-                    
+                   
                     
                 </td>
                 <td>
@@ -45,28 +47,44 @@
                 </td>
 
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ServerId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ServerId }) @*|
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ServerId }) |*@
+                    @Html.ActionLink("server info", "Details", new { id = item.ServerId }, new { @class = "serverlink" }) @*
                     @Html.ActionLink("Delete", "Delete", new { id = item.ServerId })*@
                 </td>
             </tr>
-   
+
             foreach (var notification in item.Notifications)
             {
                 <tr>
                     <td>
                         <div class="@notification.Status">
-                            @Html.DisplayFor(modelItem => notification.Status)
+                            @*@Html.DisplayFor(modelItem => notification.Status)*@
+                            
+                            @if (notification.Status.ToString() == "Failure")
+                            {
+                                <i class="glyphicon glyphicon-wrench"></i>
+                            }
+                            @if (notification.Status.ToString() == "Success")
+                            {
+                                <i class="glyphicon glyphicon-check"></i>
+                            }
+                            @if (notification.Status.ToString() == "Unknown")
+                            {
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                            }
+                       
                         </div>
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => notification.Message)
+                        <div class="notificationmessage">
+                            @Html.DisplayFor(modelItem => notification.Message)
+                        </div>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => notification.StatusType)
                     </td>
                     <td>
-                        
+                        @Html.DisplayFor(modelItem => notification.DateCreated)
                     </td>
                 </tr>
             }

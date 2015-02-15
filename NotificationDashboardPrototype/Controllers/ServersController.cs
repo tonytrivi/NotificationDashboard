@@ -25,6 +25,8 @@ namespace NotificationDashboardPrototype.Controllers
         {
             var servers = _repo.GetServers().Include("Notifications").ToList();
 
+
+
             return View(servers);
             
             //return View(db.Servers.ToList());

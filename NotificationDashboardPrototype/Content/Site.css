@@ -27,14 +27,17 @@ textarea {
 
 .Success {
     color: green;
+    text-align: center;
 }
 
 .Failure {
     color: red;
+    text-align: center;
 }
 
 .Unknown {
     color: orange;
+    text-align: center;
 }
 
 .navbar-inverse {
@@ -44,6 +47,7 @@ textarea {
 
 .navbar-inverse .navbar-brand {
   color: #efefef;
+  
 }
 
 /* mouse over links in top nav */
@@ -51,6 +55,36 @@ textarea {
 .navbar-inverse .navbar-brand:focus {
   color: #ffffff;
   background-color: transparent;
+}
+
+.navbar {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th {
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+td {
+
+  font-family: Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+/* on server index page */
+.serverlink {
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* on server index */
+.notificationmessage {
+
+  font-style: italic;
+
 }
 
 
