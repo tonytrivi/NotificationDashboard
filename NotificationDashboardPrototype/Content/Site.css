@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #e8e5e5;
+    background-color: #fffefc;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -36,3 +36,21 @@ textarea {
 .Unknown {
     color: orange;
 }
+
+.navbar-inverse {
+
+  background-color: darkslategray;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #efefef;
+}
+
+/* mouse over links in top nav */
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+
