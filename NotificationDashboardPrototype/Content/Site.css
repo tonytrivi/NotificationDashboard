@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 2px;
     background-color: #fffefc;
 }
 
@@ -35,6 +35,8 @@ textarea {
     text-align: center;
 }
 
+
+
 .Unknown {
     color: orange;
     text-align: center;
@@ -43,10 +45,12 @@ textarea {
 .navbar-inverse {
 
   background-color: darkslategray;
+  border-bottom-color:gray;
+
 }
 
 .navbar-inverse .navbar-brand {
-  color: #efefef;
+  color: gray;
   
 }
 
@@ -61,17 +65,35 @@ textarea {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-th {
-
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+p {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 
 td {
 
-  font-family: Calibri, 'Trebuchet MS', sans-serif
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  
 
 }
+
+th {
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+
+}
+
+.serverrow {
+
+  border-top: 5px solid white; 
+
+ 
+
+}
+
+
+
+
 
 /* on server index page */
 .serverlink {
@@ -85,6 +107,21 @@ td {
 
   font-style: italic;
 
+}
+
+i.glyphicon {
+    font-size: 1.3em;
+}
+
+.panel-footer {
+    background-color: white;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    border-color:white;
+    padding-top: 25px;
+    padding-bottom: 2px;
+    font-size: .9em;
+    color:gray;
+    height: 50px;
 }
 
 
