@@ -50,6 +50,8 @@ namespace NotificationDashboardPrototype.Controllers
         // GET: Servers/Create
         public ActionResult Create()
         {
+            ViewBag.Message = "Not implemented.";
+
             return View();
         }
 
@@ -58,31 +60,37 @@ namespace NotificationDashboardPrototype.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ServerId,Name,LocationLatLong")] Server server)
+        public ActionResult Create([Bind(Include = "ServerId,Name")] Server server)
         {
-            if (ModelState.IsValid)
-            {
-                db.Servers.Add(server);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    db.Servers.Add(server);
+            //    db.SaveChanges();
+            //    return RedirectToAction("Index");
+            //}
 
-            return View(server);
+            //return View(server);
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         // GET: Servers/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Server server = db.Servers.Find(id);
-            if (server == null)
-            {
-                return HttpNotFound();
-            }
-            return View(server);
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //Server server = db.Servers.Find(id);
+            //if (server == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            //return View(server);
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         // POST: Servers/Edit/5
@@ -104,16 +112,19 @@ namespace NotificationDashboardPrototype.Controllers
         // GET: Servers/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Server server = db.Servers.Find(id);
-            if (server == null)
-            {
-                return HttpNotFound();
-            }
-            return View(server);
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //Server server = db.Servers.Find(id);
+            //if (server == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            //return View(server);
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         // POST: Servers/Delete/5
@@ -121,10 +132,13 @@ namespace NotificationDashboardPrototype.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Server server = db.Servers.Find(id);
-            db.Servers.Remove(server);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            //Server server = db.Servers.Find(id);
+            //db.Servers.Remove(server);
+            //db.SaveChanges();
+            //return RedirectToAction("Index");
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         protected override void Dispose(bool disposing)

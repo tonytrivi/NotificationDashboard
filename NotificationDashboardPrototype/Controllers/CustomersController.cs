@@ -38,6 +38,8 @@ namespace NotificationDashboardPrototype.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
+            ViewBag.Message = "Not implemented.";
+
             return View();
         }
 
@@ -48,29 +50,37 @@ namespace NotificationDashboardPrototype.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CustomerId,Name")] Customer customer)
         {
-            if (ModelState.IsValid)
-            {
-                db.Customers.Add(customer);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    db.Customers.Add(customer);
+            //    db.SaveChanges();
+            //    return RedirectToAction("Index");
+            //}
 
-            return View(customer);
+            //return View(customer);
+
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         // GET: Customers/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(customer);
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //Customer customer = db.Customers.Find(id);
+            //if (customer == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            //return View(customer);
+
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         // POST: Customers/Edit/5
@@ -80,28 +90,36 @@ namespace NotificationDashboardPrototype.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "CustomerId,Name")] Customer customer)
         {
-            if (ModelState.IsValid)
-            {
-                db.Entry(customer).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(customer);
+            //if (ModelState.IsValid)
+            //{
+            //    db.Entry(customer).State = EntityState.Modified;
+            //    db.SaveChanges();
+            //    return RedirectToAction("Index");
+            //}
+            //return View(customer);
+
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         // GET: Customers/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(customer);
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //Customer customer = db.Customers.Find(id);
+            //if (customer == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            //return View(customer);
+
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         // POST: Customers/Delete/5
@@ -109,10 +127,14 @@ namespace NotificationDashboardPrototype.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Customer customer = db.Customers.Find(id);
-            db.Customers.Remove(customer);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            //Customer customer = db.Customers.Find(id);
+            //db.Customers.Remove(customer);
+            //db.SaveChanges();
+            //return RedirectToAction("Index");
+
+            ViewBag.Message = "Not implemented.";
+
+            return View();
         }
 
         protected override void Dispose(bool disposing)
