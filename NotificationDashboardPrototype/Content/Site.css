@@ -83,6 +83,20 @@ th {
 
 }
 
+dt {
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+
+}
+
+dd {
+
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  
+
+}
+
 .serverrow {
 
   border-top: 5px solid white; 

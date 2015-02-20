@@ -21,7 +21,7 @@ namespace NotificationDashboardPrototype.Migrations
         }
 
         /// <summary>
-        /// Seed is triggered by database initialization, even if model hasn't changed
+        /// Seed is triggered by database initialization
         /// </summary>
         /// <param name="dbContext"></param>
         protected override void Seed(NotificationDashboardPrototype.Data.NotificationModelContext dbContext)
